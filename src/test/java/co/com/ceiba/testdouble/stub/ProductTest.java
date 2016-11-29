@@ -9,7 +9,7 @@ public class ProductTest {
 	@Test
 	public void itCalculatesTotalPrice() {
 		//Arrange
-		Product product = new Product(new TaxCalculatorStub(), 6000.00);
+		Product product = new Product(new TaxCalculatorStub(), 6000.00, "Yogurt", false);
 		//Act
 		Double priceToPay = product.calcPriceToPay();
 		//Assert
