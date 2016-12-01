@@ -7,21 +7,9 @@ import co.com.ceiba.testdouble.stub.Product;
 import co.com.ceiba.testdouble.stub.TaxCalculatorStub;
 
 public class ProductFakeRepository implements ProductRepository {
-	private static final boolean ISSOLD = true;
-	private static final boolean ISNOTSSOLD = false;
+	
 
 	List<Product> productsInMemory = new ArrayList<Product>();
-
-	public ProductFakeRepository() {
-		productsInMemory
-				.add(new Product(new TaxCalculatorStub(), 14000.00, "Guacamole", ISSOLD));
-		productsInMemory.add(
-				new Product(new TaxCalculatorStub(), 55000.00, "Galleta Soda", ISSOLD));
-		productsInMemory.add(
-				new Product(new TaxCalculatorStub(), 71000.00, "Jugo", ISSOLD));
-		productsInMemory.add(
-				new Product(new TaxCalculatorStub(), 850000.00, "Chocolate", ISNOTSSOLD));		
-	}
 
 	@Override
 	public List<Product> findSaledProducts() {
@@ -33,5 +21,20 @@ public class ProductFakeRepository implements ProductRepository {
 		}
 		return saledProducts;
 	}
+
+	
+	public ProductFakeRepository() {
+		productsInMemory
+				.add(new Product(new TaxCalculatorStub(), 14000.00, "Guacamole", ISSOLD));
+		productsInMemory.add(
+				new Product(new TaxCalculatorStub(), 55000.00, "Galleta Soda", ISSOLD));
+		productsInMemory.add(
+				new Product(new TaxCalculatorStub(), 71000.00, "Jugo", ISSOLD));
+		productsInMemory.add(
+				new Product(new TaxCalculatorStub(), 850000.00, "Chocolate", ISNOTSSOLD));		
+	}
+	
+	private static final boolean ISSOLD = true;
+	private static final boolean ISNOTSSOLD = false;
 
 }

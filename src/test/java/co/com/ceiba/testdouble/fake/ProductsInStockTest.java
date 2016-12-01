@@ -8,7 +8,7 @@ public class ProductsInStockTest {
 
 	@Test
 	public void itCalculatesCostSaledProducts() {
-		//Arran
+		//Arrange
 		ProductsInStock stock = new ProductsInStock(new ProductFakeRepository());
 		//Act
 		Double costSaledProducts = stock.calculateCostSaledProducts();

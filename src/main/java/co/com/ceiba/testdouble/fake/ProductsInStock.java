@@ -6,7 +6,7 @@ public class ProductsInStock {
 
 	private ProductRepository productRepository;
 
-	public ProductsInStock(ProductFakeRepository aProductRepository) {
+	public ProductsInStock(ProductRepository aProductRepository) {
 		this.productRepository = aProductRepository;
 	}
 
@@ -17,5 +17,7 @@ public class ProductsInStock {
 		}
 		return costSaledProducts;
 	}
+	
+	
 
 }
