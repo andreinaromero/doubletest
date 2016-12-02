@@ -8,13 +8,14 @@ public class InternetMock implements Internet {
 		return "";
 	}
 	
-	public Boolean calledTranslate() {
+	public Boolean calledSearchTranslationFor() {
 		return this.translated;
 	}
 	
 	public String searchDefinitionInWikipedia(String toSearch) {
 		throw new UnsupportedOperationException();
 	}
+
 
 	
 	

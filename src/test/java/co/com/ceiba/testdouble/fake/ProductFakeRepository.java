@@ -12,16 +12,17 @@ public class ProductFakeRepository implements ProductRepository {
 	List<Product> productsInMemory = new ArrayList<Product>();
 
 	@Override
-	public List<Product> findSaledProducts() {
-		List<Product> saledProducts = new ArrayList<Product>();
+	public List<Product> findSoldProducts() {
+		List<Product> soldProducts = new ArrayList<Product>();
 		for (Product product: this.productsInMemory) {
 			if (product.isSold()) {
-				saledProducts.add(product);
+				soldProducts.add(product);
 			}
 		}
-		return saledProducts;
+		return soldProducts;
 	}
 
+	
 	
 	public ProductFakeRepository() {
 		productsInMemory

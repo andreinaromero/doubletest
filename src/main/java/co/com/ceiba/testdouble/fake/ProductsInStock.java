@@ -10,14 +10,17 @@ public class ProductsInStock {
 		this.productRepository = aProductRepository;
 	}
 
-	public Double calculateCostSaledProducts() {
-		Double costSaledProducts = 0.0;
-		for (Product product : productRepository.findSaledProducts()) {
-			costSaledProducts += product.getPrice();
+	public Double calculateCostSoldProducts() {
+		Double costSoldProducts = 0.0;
+		for (Product product : productRepository.findSoldProducts()) {
+			costSoldProducts += product.getPrice();
 		}
-		return costSaledProducts;
+		return costSoldProducts;
 	}
 	
 	
 
+	
+	
+	
 }

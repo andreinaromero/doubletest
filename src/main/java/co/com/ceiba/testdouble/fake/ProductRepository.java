@@ -6,6 +6,6 @@ import co.com.ceiba.testdouble.stub.Product;
 
 public interface ProductRepository {
 
-	List<Product> findSaledProducts();
+	List<Product> findSoldProducts();
 
 }

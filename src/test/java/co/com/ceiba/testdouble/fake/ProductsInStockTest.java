@@ -7,13 +7,16 @@ import org.junit.Test;
 public class ProductsInStockTest {
 
 	@Test
-	public void itCalculatesCostSaledProducts() {
+	public void itCalculatesCostSoldProducts() {
 		//Arrange
 		ProductsInStock stock = new ProductsInStock(new ProductFakeRepository());
 		//Act
-		Double costSaledProducts = stock.calculateCostSaledProducts();
+		Double costSoldProducts = stock.calculateCostSoldProducts();
 		//Assert
-		assertEquals("The costSaledProducts isn't 140000", 140000.00, costSaledProducts, 0.0);
+		assertEquals("The costSoldProducts isn't 140000", 140000.00, costSoldProducts, 0.0);
 	}
 
+	
+	
+	
 }
