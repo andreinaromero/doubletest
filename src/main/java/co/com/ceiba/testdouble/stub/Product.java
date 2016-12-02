@@ -6,6 +6,10 @@ public class Product {
 	private TaxCalculator taxCalculator;
 	private boolean isSold;
 	
+	public Product() {
+		
+	}
+	
 	public Product(TaxCalculator aTaxCalculator, double aPrice, String aName, Boolean sold) {
 		this.taxCalculator = aTaxCalculator;
 		this.price = aPrice;
